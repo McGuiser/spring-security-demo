@@ -20,6 +20,17 @@
 	
 	<hr>
 	
+	<!-- Add a link to point to /leaders ... this is for the managers -->
+	
+	<p>
+	
+		<a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>
+		(Only for Manager peeps)
+	
+	</p>
+	
+	<hr>
+	
 		<!-- Display user name and role -->
 		
 		<p>
