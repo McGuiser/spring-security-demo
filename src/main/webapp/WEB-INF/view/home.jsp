@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 
 <html>
 
@@ -16,6 +17,20 @@
 		Welcome to the Dunder Mifflin company home page!
 	
 	</p>
+	
+	<hr>
+	
+		<!-- Display user name and role -->
+		
+		<p>
+		
+		User: <security:authentication property="principal.username" />
+		<br><br>
+		Role(s): <security:authentication property="principal.authorities" />
+		
+		</p>
+	
+	<hr>
 	
 	<!-- Add a logout button -->
 	
