@@ -71,19 +71,19 @@ public class DemoAppConfig {
 		// Set database connection props
 		
 		securityDataSource.setJdbcUrl(env.getProperty("jdbc.url"));
-		securityDataSource.setJdbcUrl(env.getProperty("jdbc.user"));
-		securityDataSource.setJdbcUrl(env.getProperty("jdbc.password"));
+		securityDataSource.setUser(env.getProperty("jdbc.user"));
+		securityDataSource.setPassword(env.getProperty("jdbc.password"));
 		
 		// Set connection pool props
 		
 		securityDataSource.setInitialPoolSize(
-				getIntProperty("connection.pool.initialPoolsize"));
+				getIntProperty("connection.pool.initialPoolSize"));
 		
 		securityDataSource.setMinPoolSize(
-				getIntProperty("connection.pool.minPoolsize"));
+				getIntProperty("connection.pool.minPoolSize"));
 		
 		securityDataSource.setMaxPoolSize(
-				getIntProperty("connection.pool.maxPoolsize"));
+				getIntProperty("connection.pool.maxPoolSize"));
 		
 		securityDataSource.setMaxIdleTimeExcessConnections(
 				getIntProperty("connection.pool.maxIdleTime"));
