@@ -34,9 +34,13 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Bean
 	public UserDetailsManager userDetailsManager() {
-	JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager();
-	jdbcUserDetailsManager.setDataSource(securityDataSource);
-	return jdbcUserDetailsManager; 
+		
+		JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager();
+		
+		jdbcUserDetailsManager.setDataSource(securityDataSource);
+		
+		return jdbcUserDetailsManager;
+	
 	}
 
 	@Override
